@@ -1,6 +1,8 @@
 package com.example.prateek.visionapitest.Rest;
 
 import com.example.prateek.visionapitest.Model.MovieResponse;
+import com.example.prateek.visionapitest.Model.MusicResponse;
+import com.example.prateek.visionapitest.Model.Tracks;
 import com.example.prateek.visionapitest.Model.TvResponse;
 
 import retrofit2.Call;
@@ -21,4 +23,8 @@ public interface ApiInterface {
 
     @GET("discover/tv")
     Call<TvResponse> getTvAccGenre(@Query("api_key") String apiKey, @Query("with_genres") String genres);
+
+    @GET("?method=tag.gettoptracks")
+    Call<MusicResponse> getTracks(@Query("tag") String tag, @Query("api_key") String apiKey, @Query("format") String format);
+
 }

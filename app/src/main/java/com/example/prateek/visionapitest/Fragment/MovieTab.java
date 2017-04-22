@@ -38,7 +38,6 @@ public class MovieTab extends Fragment {
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
-        //Call<MovieResponse> call = apiService.getTopRatedMovies(API_KEY);
         Call<MovieResponse> call = apiService.getMovieAccGenre(API_KEY, "28,12");
 
         call.enqueue(new Callback<MovieResponse>() {

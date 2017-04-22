@@ -28,7 +28,6 @@ public class TvAdapter extends RecyclerView.Adapter<TvAdapter.TvViewHolder> {
 
         public TvViewHolder(View v) {
             super(v);
-
             tvLayout = (LinearLayout) v.findViewById(R.id.tv_layout);
             tvTitle = (TextView) v.findViewById(R.id.title);
             firstAirDate = (TextView) v.findViewById(R.id.firstAirDate);
